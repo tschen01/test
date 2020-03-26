@@ -1,0 +1,118 @@
+.JokeList {
+    /* display: flex; */
+    width: 100vw;
+    height: 100vh;
+    
+    /* color: #78909c; 
+     background: linear-gradient(
+      111deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(29, 253, 190, 1) 50%,
+      rgba(252, 167, 69, 1) 93%
+    );  */
+  
+  } 
+  
+  /* .JokeList-sidebar {
+    background: #9575cd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1),
+      inset 0 0 25px #7e57c2;
+    z-index: 2;
+  } */
+  
+  /* .JokeList-sidebar img {
+    width: 50%;
+    box-shadow: -6px 15px 14px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+  } */
+  
+  .JokeList-title {
+    /* font-size: 4rem;
+    margin: 2rem;
+    color: blue;
+    font-weight: 300;
+    letter-spacing: 0.6rem; */
+    font-size: 5vh;
+    margin-left: 1vw;
+    /* margin: 2rem; */
+     color: #78909c; 
+    /* background: linear-gradient(
+      111deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(29, 253, 190, 1) 50%,
+      rgba(252, 167, 69, 1) 93%
+    );  */
+    font-weight: 300;
+    letter-spacing: 0.6rem;
+  }
+  
+  /* .JokeList-title span {
+    font-weight: 700;
+    letter-spacing: 0rem;
+  } */
+  
+  .JokeList-jokes {
+    height: 90vh;
+    background: white;
+    align-self: center;
+    width: 70vw;
+    overflow: scroll;
+  }
+  
+  .JokeList-spinner {
+    display: flex;
+    color: grey;
+    text-align: center;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 70px;
+  }
+  
+  .JokeList-btn {
+    font-size: 1.2vw;
+    width: 10vw;
+    border-radius: 2rem;
+    color: black;
+    padding: -1rem 0rem;
+    margin: 1vw;
+  
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+   .JokeList-btn2 {
+    margin-left: 10vw;
+  } 
+  
+  .JokeList-btn:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+  }
+  
+  .JokeList-btn:active {
+    transform: translateY(-1px);
+  }
+  
+  form {
+    color: black;
+  }
+  
+  h1 {
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  .move{
+    margin-left: 1vw;
+  }
+  
+  
+  
