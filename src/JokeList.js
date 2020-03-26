@@ -9,29 +9,22 @@ export default class JokeList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      numberOfJokes: 10,
       jokes: [],
       loading: false,
       value: '',
       joke: 'default'
     };
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
     this.seenJokes = new Set(this.state.jokes.map(j => j.text));
-
     this.handleClick = this.handleClick.bind(this);
     this.refreshClick = this.refreshClick.bind(this);
-  
-  
   }
 
   setSingleJoke(state) {
-    //alert(state);
     this.state.joke = state;
   }
-
+  
   componentDidMount() {
     if (this.state.jokes.length === 0) {
       this.getJokes();
@@ -43,28 +36,18 @@ export default class JokeList extends Component {
   }
 
   handleSubmit(event) {
-    //alert('Are you sure you want to add ' + this.state.value + " JOKES?");
     event.preventDefault();
   }
 
   async getJokes2(){
     try{
-      // this.state.jokes = [];
       let jokes = [];
       let res = await axios.get("https://icanhazdadjoke.com/", {
           headers: { Accept: "application/json" }
         })
-        // ("setSingleJoke", res);
-       // this.setSingleJoke(res.data.joke);
-       // alert(res.data.joke);
        this.state.jokes.splice(0,1);
        let newJoke = res.data.joke;
        jokes.push({ id: uuid(), text: newJoke, votes: 0 });
-       
-      //  while (this.state.jokes > this.state.numberOfJokes) {
-      //   //Loads joke API
-      //   jokes.splice(0,1);
-      // }
         this.setState(
           st => ({
             jokes: [...st.jokes, ...jokes],
@@ -85,11 +68,9 @@ export default class JokeList extends Component {
       let jokes = [];
       this.state.numOfJokes = this.state.value; 
       while (jokes.length < this.state.numOfJokes) {
-        //Loads joke API
         let res = await axios.get("https://icanhazdadjoke.com/", {
           headers: { Accept: "application/json" }
         });
-
         let newJoke = res.data.joke;
         if (!this.seenJokes.has(newJoke)) {
           jokes.push({ id: uuid(), text: newJoke, votes: 0 });
@@ -140,19 +121,15 @@ export default class JokeList extends Component {
           <h1 className="JokeList-title">
               Jokes
           </h1>
-          
-          {/* { <img src="https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg" /> } */}
           <form onSubmit={this.handleSubmit}>
-        <label class = "move">
-          Number Of Jokes to Display:
-          <input type="number" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        {/* <input type="submit" value="Submit" /> */}
-        <button className="JokeList-btn" onClick={this.handleClick}>
-            Display Jokes!
-          </button>
-      </form>
-
+            <label class = "move">
+              Number Of Jokes to Display:
+              <input type="number" value={this.state.value} onChange={this.handleChange} />
+            </label>
+            <button className="JokeList-btn" onClick={this.handleClick}>
+                Display Jokes!
+            </button>
+          </form>
         </div>
 
         {this.state.loading ? (
@@ -173,8 +150,6 @@ export default class JokeList extends Component {
                   votes={joke.votes}
                   upvote={() => this.handleVote(joke.id, 1)}
                   downvote={() => this.handleVote(joke.id, -1)}
-
-          
                 />
                 <button className="JokeList-btn2" onClick={this.refreshClick}>
                   Generate Joke

@@ -6,7 +6,7 @@
     font-weight: 400;
     padding: 1rem;
     width: 80vw;
-   margin-left: 10vw;
+    margin-left: 10vw;
     color: black; 
      background: linear-gradient(
       111deg,
@@ -17,6 +17,7 @@
     background-repeat: repeat;
   }
   
+  /* display joke button */
   .Joke-buttons {
     display: flex;
     align-items: center;
@@ -25,11 +26,12 @@
     width: 15%;
   }
   
+  /* the text of the joke */
   .Joke-text {
     width: 75%;
     font-size: 1.2rem;
   }
-  
+
   .Joke-votes {
     width: 50px;
     height: 50px;
@@ -51,5 +53,6 @@
   .fa-arrow-up {
     margin-left: -10px;
   }
+
   
   

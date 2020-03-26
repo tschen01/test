@@ -2,49 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: center; 
-   /* height: 100vh;
-  font-family: "Rubik", sans-serif;
-  color: #78909c; */
-  /* background: linear-gradient(
-    111deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(29, 253, 190, 1) 50%,
-    rgba(252, 167, 69, 1) 93%
-  ); */
 } 
 
+/* for media responsiveness */
 @media only screen and (max-width: 800px) {
 	.Joke {
     display: flex;
-    /* border-bottom: 20px solid #eeeeee; */
     align-items: left;
     justify-content: left;
     font-weight: 400;
     padding: 10vw;
     margin-left: -.5em;
   }
-  /* Joke {
-    margin-left: ;
-  } */
   .Joke-text {
     width: 50vw;
     font-size: 1em;
   }
-  /* .JokeList-jokes {
-    height: 10%;
-    background: black;
-    align-self: center;
-    width: 10%;
-    overflow: scroll;
-  } */
-
-  /* .JokeList-title {
-    font-size: 1vh;
-    margin: 2rem;
-    color: green;
-    font-weight: 300;
-    letter-spacing: 0.6rem;
-  } */
   .JokeList-btn2 {
     margin-left: 0vw;
   } 
