@@ -81,14 +81,13 @@
     border-radius: 2rem;
     color: black;
     padding: -1rem 0rem;
-    margin: 45vw;
   
     cursor: pointer;
     transition: 0.2s ease;
   }
   
    .JokeList-btn2 {
-    margin-left: 10vw;
+    margin-left: 45vw;
   } 
   
   .JokeList-btn:hover {
