@@ -1,25 +1,20 @@
 .App {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-} 
-
-/* for media responsiveness */
-@media only screen and (max-width: 800px) {
-	.Joke {
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    font-weight: 400;
-    padding: 10vw;
-    margin-left: -.5em;
-  }
-  .Joke-text {
-    width: 50vw;
-    font-size: 1em;
-  }
-  .JokeList-btn2 {
-    margin-left: 0vw;
-  } 
+  text-align: center;
 }
 
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: rgb(48, 49, 49);
+  color: aliceblue;
+}
+
+.nav-links{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
